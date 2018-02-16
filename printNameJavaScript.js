@@ -1,3 +1,3 @@
 function printNameOnAlertBox(){
-    alert("Hi! Your mind has been blown!");
+    alert("Hi! Your mind has been blown ;)");
 }
