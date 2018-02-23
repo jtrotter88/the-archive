@@ -5,5 +5,5 @@ function alertPrint(){
     alert("I have a message for you in an alert!");
 }
 function documentPrint(){
-    document.write("I have a message for you on a document!");
+    document.write("I have a message for you on a document!")
 }
