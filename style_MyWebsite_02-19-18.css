@@ -85,3 +85,18 @@ a {
 	border-width:5px;
 	text-align:center;
 }
+
+
+/* Standard syntax */
+@keyframes example {
+    11% {background-color: red;}
+	22% {background-color: orangered;}
+	33% {background-color: orange;}
+	44% {background-color: yellow;}
+	55% {background-color: yellowgreen;}
+	66% {background-color: greenyellow;}
+	77% {background-color: green;}
+	88% {background-color: teal;}
+	100% {background-color: blue;}
+}
+
