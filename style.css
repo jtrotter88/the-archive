@@ -1,0 +1,13 @@
+.calculator{
+    padding:0 20px;
+    margin: 0 2px;
+    background-color: red;
+    }
+.box{
+    overflow:hidden;
+    float:left;
+    background-color: blue;
+}
+h3{
+    margin:0;
+}

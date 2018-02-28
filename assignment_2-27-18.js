@@ -93,3 +93,16 @@ function circumCircle() {
   document.getElementById("answerText3").innerHTML = circumCircle;
   alert(circumCircle);
 }
+
+function clearAll() {
+  document.getElementById("answerText").innerHTML = '';
+  document.getElementById("answerText1").innerHTML = '';
+  document.getElementById("answerText2").innerHTML = '';
+  document.getElementById("answerText3").innerHTML = '';
+  document.getElementById("num1").innerHTML = '';
+  document.getElementById("num2").innerHTML = '';
+  document.getElementById("lengthNum").innerHTML = '';
+  document.getElementById("widthNum").innerHTML = '';
+  document.getElementById("radius").innerHTML = '';
+
+}
