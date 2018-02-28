@@ -1,0 +1,75 @@
+<html>
+
+  <head>
+<script src="assignment_2-27-18.js"></script>
+<style>
+.calculator{
+padding:0 20px;
+margin: 0 2px;
+}
+.box{
+overflow:hidden;
+float:left;
+
+}
+</style>
+  </head>
+
+  <body>
+	
+	<div style="width:100%;margin:auto 10%;">
+	
+	<div class="box">
+	<div class="calculator">
+	<h3>Simple Math</h3>
+	<h5>W2-D2 Assignment 2</h5>
+	<input type="button" onclick="instructions1()" value="Instructions"><br><br>
+    Number 1: <input type="text" id="num1"></input><br>
+	Number 2: <input type="text" id="num2"></input><br><br>
+    
+    <input type="button" onclick="addNums()" value="Add">
+	<input type="button" onclick="subtractNums()" value="Subtract">
+	<input type="button" onclick="multiplyNums()" value="Multiply">
+	<input type="button" onclick="divideNums()" value="Divide"><br><br>
+	<input type="button" onclick="clearAll()" value="Clear"></input><br><br>
+    <p>The answer is: </p>
+	<h1 id="answerText1"></h1><br><br>
+	</div></div>
+	
+	<div class="box">
+	<div class="calculator">
+	<h3>Rectangles</h3>
+	<h5>W2-D2 Assignment 3</h5>
+	<input type="button" onclick="instructions2()" value="Instructions"></input><br><br>
+	Length: <input type="text" id="lengthNum"><br>
+	Width: <input type="text" id="widthNum"><br><br>
+    
+    <input type="button" onclick="areaRect()" value="Area"></input>
+	<input type="button" onclick="perimRect()" value="Perimeter"></input><br><br>
+	<input type="button" onclick="clearAll()" value="Clear"></input><br><br>
+	<p>The value is: </p>
+	<h1 id="answerText2"></h1><br><br>
+	</div></div>
+	
+	<div class="box">
+	<div class="calculator">
+	<h3>Circles</h3>
+	<h5>W2-D2 Assignment 4</h5>
+	<input type="button" onclick="instructions3()" value="Instructions"></input><br><br>
+	Radius: <input type="text" id="radius"><br><br><br>
+    <input type="button" onclick="areaCircle()" value="Area"></input>
+	<input type="button" onclick="circumCircle()" value="Circumference"></input><br><br>
+	<input type="button" onclick="clearAll()" value="Clear"></input><br><br>
+	<p>The value is: </p>
+	<h1 id="answerText3"></h1><br><br>
+	</div></div>
+	
+	</div>
+	<div style="display:inline-block; margin:auto 25%">
+	<h3 id="answerText"><h3>
+	
+	</div>
+	
+  </body>
+
+</html>
