@@ -1,0 +1,124 @@
+#nav {
+text-align:center;
+}
+#nav ul {
+display:inline-block;
+list-style:none; 
+}
+
+#nav li {
+display:inline;
+background-color:white;
+}
+#nav a {
+float:left;
+text-decoration:none; 
+border-radius:5px;
+background-color:white;
+margin-left:10px;
+padding:10px 30px; /* variable width */
+}
+
+
+
+.nav-menu {
+	background-color:lightgray;
+	border-bottom-left-radius: 75px;
+	border-bottom-right-radius: 75px;
+}
+
+a {
+	padding: 10px 30px;
+	color:purple;
+	font-weight:bold;
+	font-size:2vw;
+}
+
+button{
+	background-color:green;
+	border-radius:15px;
+	padding:10px 20px;
+	border-bottom-color:black;
+	border-right-color:darkgray
+	
+}
+
+button:hover {
+	background-color:yellow;
+	border-radius:15px;
+	padding:10px 20px;
+	border-bottom-color: red;
+	border-right-color: white;
+}
+
+.top-nav-menu {
+	width:100%;
+	display:block;
+	
+}
+
+
+.aboveNav {
+	background-color:black;
+	width:100%;
+	border-bottom-left-radius: 75px;
+	border-bottom-right-radius: 75px;
+}
+.aboveNav2 {
+	background-color: lightgray;
+	border-bottom-left-radius: 75px;
+	border-bottom-right-radius: 75px;
+}
+
+.logo {
+	
+	margin:auto 33%;
+	display:block;
+}
+
+.imglogo {
+	display:block;
+	width:100%;
+	
+}
+
+.bodybox {
+	margin:auto;
+	padding:10px;
+	background-color:gray;
+}
+
+#bodybox1 {
+	/*width:95%;
+	height:95%;*/
+	background-color:black;
+	padding: 10px;
+}
+
+.hdr {
+	background-color:black;
+	color:white;
+	border-style:solid;
+	border-left-color: lime;
+	border-top-color: red;
+	border-bottom-color: yellow;
+	border-right-color: blue;
+	border-width:5px;
+	text-align:center;
+	margin: 2.5% 2.5% 0;
+}
+
+
+/* Standard syntax */
+@keyframes example {
+    11% {background-color: red;}
+	22% {background-color: orangered;}
+	33% {background-color: orange;}
+	44% {background-color: yellow;}
+	55% {background-color: yellowgreen;}
+	66% {background-color: greenyellow;}
+	77% {background-color: green;}
+	88% {background-color: teal;}
+	100% {background-color: blue;}
+}
+
