@@ -1,0 +1,44 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    }
+    .container{
+    display:grid;
+    grid-template-columns: 20%;
+    grid-template-rows:2;
+    }
+    
+    ul{
+    margin-top:20px;
+    }
+    ul li{
+    list-style-type: none;
+    display: inline;
+    margin:5px;
+    }
+    
+    a{
+    text-decoration: none;
+    }
+    .input{
+    height: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: right;
+    border:0;
+    }
+    .controls{
+    display: inline-grid;
+    grid-template-columns: repeat(4,25%);
+    }
+    .controls button{
+    height: 38px;
+    border:0;
+    font-weight: bold;
+    font-size:20px;
+    margin:5px;
+    }
+    
+    .controls button:hover{
+    background-color:gray;
+    }
