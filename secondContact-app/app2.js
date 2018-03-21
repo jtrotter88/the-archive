@@ -17,11 +17,17 @@ app.use(bodyParser.urlencoded({extended:true}));
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 //connect the app to the db in the specified location
-mongoose.connect("mongodb://localhost:27017/contactApp2");
+mongoose.connect("mongodb://localhost:27017/contactApp");
+
+//inform the app to use ejs as it's view engine
+app.set('view engine', 'ejs');
 
 var contactSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
+    emailAddress: String,
+    subjectSelect: String,
+    longMessage: String,
     create_at: {type:Date, default:Date.now()},
 });
 var Contact = mongoose.model("ContactInfo", contactSchema);
@@ -33,11 +39,23 @@ var Contact = mongoose.model("ContactInfo", contactSchema);
 //to GET method that responds with index.html file
 //req - HTTP req made by client
 //res - HTTP response
+
+
+//Creating a GET method
 app.get("/", (req, res) => {
-    //sendFile is a method in express framework that send file back
-    //to the client
-    res.sendFile(__dirname + "/index.html");
-});
+    //find is a mongoose function that helps get all results
+    //from the specified schema
+    Contact.find((err, result) =>
+    {
+        //if unable to get results
+        //log the error to the console
+        if (err) return console.log(err)
+        //if success render index.ejs and assign result to
+        //to a templating varaiable named contacts that we can access
+        //in index.ejs
+        res.render("index.ejs",{contacts: result})
+    })
+})
 
 app.get("/style.css", (req, res) => {
     //sendFile is a method in express framework that send file back
