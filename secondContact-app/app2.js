@@ -67,13 +67,31 @@ app.get("/style.css", (req, res) => {
 app.post("/saveContact", (req, res) => {
     console.log(req);
     var myData = new Contact(req.body);
-    myData.save().then(item => {
-        res.send("Name saved to database");
+    myData.save()
+        .then(item => {
+            res.redirect("/displayResults");
     })
     .catch(err => {
         res.status(400).send("Unable to database");
     })
 });
+
+app.get("/displayResults", (req, res) => {
+    //find is a mongoose function that helps get all results
+    //from the specified schema
+    
+    Contact.find({ firstName: "Justin" }, (err, result) =>
+        //Contact.find((err, result) =>
+    {
+        //if unable to get results
+        //log the error to the console
+        if (err) return console.log(err)
+        //if success render index.ejs and assign result to
+        //to a templating varaiable named contacts that we can access
+        //in index.ejs
+        res.render("index.ejs",{contacts: result})
+    })
+})
 
 //informing your app to listen to port number you provided in the top
 app.listen(port, () => {
