@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link href="/public/stylesheets/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+
+ <!--old JADE CODE
+extends layout
+
+
+   h1= title
+    form#formAddTask(name="addtask",method="post",action="/addtask")
+        input#inputTaskName(type="text", placeholder="taskname", name="taskname")
+        input#inputTaskDesc(type="text", placeholder="taskdesc", name="taskdesc")
+        button#btnSubmit(type="submit") submit-->
+
+
+       <!-- <div class="container">
+            <table class="table">
+            <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Message</th>
+            </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i<contacts.length; i++) {%>
+            <tr>
+            <td><%= i+1 %></td>
+            <td><%= contacts[i].firstName %></td>
+            <td><%= contacts[i].lastName %></td>
+            <td><%= contacts[i].emailAddress %></td>
+            <td><%= contacts[i].subjectSelect %></td>
+            <td><%= contacts[i].longMessage %></td>
+            </tr>
+            <% } %>
+            </tbody>
+            </table>
+            </div>-->
+
+        
+
+        
+        <div class="container">
+            <form class="well span8" method="POST", action="/addtask">
+                <div class="row">
+                    <div class="span3">
+                        <label>First Name</label> <input class="span3" placeholder=
+                        "Task Name" type="text" name="taskname"> <label>Last Name</label>
+                        <input class="span3" placeholder="Task Description" type="text" name="taskdesc">
+                    </div>
+            
+                    <button class="btn btn-primary pull-right" type=
+                    "submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
