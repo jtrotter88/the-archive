@@ -1,4 +1,7 @@
-<% extends "layout.ejs" %>
+<%{ './layout.ejs' }%>
+<%{ content %>
+  i am inserted in base
+<%} %>
 <div>
 <h1><%= title %></h1>
 <p>Welcome to <%= #{title} %></p>
