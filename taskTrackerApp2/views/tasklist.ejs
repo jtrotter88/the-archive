@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link href="/stylesheets/style.css" rel="stylesheet"/>
+    </head>
+
+
+
+    
+    
+    <body>
+    <div class="background">
+        <div class="taskContainer">
+        <br>
+        <br>
+            <table>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Description</th>
+                </tr>
+        
+                <% for(var i=0; i<tasklist.length; i++) {%>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= tasklist[i].task %></td>
+                    <td><%= tasklist[i].description %></td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+        </div>
+    </body>
+</html>

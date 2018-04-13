@@ -1,9 +1,0 @@
-extends layout
-
-block content
-    h1.
-        Task List
-    ul
-        each task, i in tasklist
-            li
-                a(href="mailto:#{task.task}")= task.description

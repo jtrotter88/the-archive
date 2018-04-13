@@ -24,11 +24,10 @@ router.get("/tasklist", function(req, res){
   });
 });
 
-
-/* GET New TASK page. */
-router.get('/addtask', function(req, res) {
-  res.render('addtask', { title: 'Add New Task' });
+router.get("/addtask", function(req,res){
+  res.render("addtask");
 });
+
 
 // POST to Add Task Service //
 router.post('/addtask', function(req, res) {
@@ -54,7 +53,7 @@ router.post('/addtask', function(req, res) {
       }
       else {
           // And forward to success page
-          res.redirect("tasklist");
+          res.redirect("addtask");
       }
   });
 });
