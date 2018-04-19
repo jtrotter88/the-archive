@@ -8,7 +8,7 @@
     
     
     <body class="background">
-    <div class="container">
+    <div class="taskcontainer">
     <table class="table">
         <tr>
             <th scope="col">#</th>
@@ -17,12 +17,27 @@
         </tr>
         <% for(var i=0; i<tasklist.length; i++) {%>
         <tr>
-            <td><%= i+1 %></td>
-            <td><%= tasklist[i].task %></td>
-            <td><%= tasklist[i].description %></td>
+            <td><p><%= i+1 %></p></td>
+            <td><p><%= tasklist[i].task %></p></td>
+            <td><p><%= tasklist[i].description %></p></td>
         </tr>
         <% } %>
     </table>
+</div>
+
+<div class="taskContainer">
+    <form class="well span8" method="POST", action="/addtask">
+        <div class="row">
+            <div class="span3">
+                <label>TASK</label> <input class="txtbox" placeholder=
+                "Task Name" type="text" name="taskname"> <label>DESCRIPTION</label>
+                <input class="txtbox" placeholder="Task Description" type="text" name="taskdesc">
+            </div>
+    
+            <button class="btn btn-primary pull-right" type=
+            "submit">Send</button>
+        </div>
+    </form>
 </div>
 </body>
 </html>
