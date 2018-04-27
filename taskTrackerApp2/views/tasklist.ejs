@@ -15,11 +15,16 @@
             <th scope="col">Task</th>
             <th scope="col">Description</th>
         </tr>
+        
         <% for(var i=0; i<tasklist.length; i++) {%>
+                <form method="GET" action="/deletetask/tasklist[i].task">
         <tr>
-            <td><p><%= i+1 %></p></td>
-            <td><p><%= tasklist[i].task %></p></td>
+            <td name= "id"><p><%= i+1 %></p></td>
+            <td name="task"><p><%= tasklist[i].task %></p></td>
             <td><p><%= tasklist[i].description %></p></td>
+            <td>
+                <button class="btn btn-primary pull-right" type="submit"> Delete</button>
+            </form></td>
         </tr>
         <% } %>
     </table>
