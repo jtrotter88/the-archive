@@ -11,15 +11,17 @@
     <div class="taskcontainer">
     <table class="table">
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">Document ID</th>
             <th scope="col">Task</th>
             <th scope="col">Description</th>
         </tr>
         
         <% for(var i=0; i<tasklist.length; i++) {%>
-                <form method="GET" action="/deletetask/tasklist[i].task">
-        <tr>
-            <td name= "id"><p><%= i+1 %></p></td>
+            <% var taskID = tasklist[i]._id %>
+            <% var deleteURL = "/deletetask/5ae8f9b11d1cd8045037e492"; %>
+            <form method="GET" action=<%= deleteURL %>>
+            <tr>
+            <td style="padding-right:10px;" name= "id"><p><%= taskID %></p></td>
             <td name="task"><p><%= tasklist[i].task %></p></td>
             <td><p><%= tasklist[i].description %></p></td>
             <td>

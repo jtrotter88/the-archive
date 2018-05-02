@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 
 
 // POST to Add Task Service //
-router.get('/deletetask/:id', function(req, res) {
+router.get('/deletetask/:_id', function(req, res) {
 
   // Set our internal DB variable
   var db = req.db;
@@ -21,11 +21,12 @@ router.get('/deletetask/:id', function(req, res) {
 
 //collection.delete = function(req, res) {
   // Delete a task with the specified taskID in the request
+  
+//alert(req.body._id);
 
-
-
-  collection.remove({"task": req.body.task},{}, function(err, task){
+  collection.remove({ "_id": req.params._id}, function(err, task){
       if(err) {
+          alert(req.params._id)
           console.log(err);
           if(err.kind === 'ObjectId') {
               return res.status(404).send({message: "Task not found with id " + req.params._id});                
