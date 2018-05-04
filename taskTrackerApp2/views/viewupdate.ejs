@@ -16,24 +16,23 @@
             <th scope="col">Description</th>
         </tr>
         
-        <% for(var i=0; i<tasklist.length; i++) {%>
-            <% var taskID = tasklist[i]._id %>
-            <% var deleteURL = "/deletetask/"+ taskID; %>
-            <form method="GET" action=<%= deleteURL %>>
-            <tr>
-            <td style="padding-right:10px;" name= "id"><p><%= taskID %></p></td>
-            <td name="task"><p><%= tasklist[i].task %></p></td>
-            <td><p><%= tasklist[i].description %></p></td>
+            <form method="GET" action="/edit">
+                <% for(var i=0; i<tasklist.length; i++) {%>
+                    <% var taskID = tasklist[i]._id %>
+                    <form method="GET" action="/edit">
+                    <tr>
+                    <td style="padding-right:10px;" name= "id"><p><%= taskID %></p></td>
+                    <td name="task"><p><%= tasklist[i].task %></p></td>
+                    <td><p><%= tasklist[i].description %></p></td>
             <td>
                 <button class="btn btn-primary pull-right" type="submit"> Delete</button>
             </form></td>
-            <% var viewURL = "/view/"+ taskID; %>
-            <form method="GET" action=<%= viewURL %>>
+            <form method="GET" action="/view">
                 <td>
                     <button class="btn btn-primary pull-right" type="submit"> View</button>
                 </form></td>
-        </tr>
-        <% } %>
+            </tr>
+            <% } %>
     </table>
 </div>
 

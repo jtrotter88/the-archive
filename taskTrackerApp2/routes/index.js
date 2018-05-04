@@ -22,11 +22,12 @@ router.get('/deletetask/:_id', function(req, res) {
 //collection.delete = function(req, res) {
   // Delete a task with the specified taskID in the request
   
-//alert(req.body._id);
+  //var taskID = req.params._id;
 
+  //collection.remove({ "_id": ObjectId(taskID)}, function(err, task){
   collection.remove({ "_id": req.params._id}, function(err, task){
       if(err) {
-          alert(req.params._id)
+          //alert(req.params._id)
           console.log(err);
           if(err.kind === 'ObjectId') {
               return res.status(404).send({message: "Task not found with id " + req.params._id});                
@@ -37,8 +38,8 @@ router.get('/deletetask/:_id', function(req, res) {
       if(!task) {
           return res.status(404).send({message: "Task not found with id " + req.params._id});
       }
-
-      res.redirect('tasklist');
+      //alert(req.params._id)
+      res.redirect('/tasklist');
   });
 });
 
@@ -48,12 +49,37 @@ router.get("/tasks",function(req, res){
 });
 
 
-/* GET tasklist page. */
+/* GET view page of id clicked. */
 router.get("/tasklist", function(req, res){
   var db = req.db;
   var collection = db.get("usercollection");
   collection.find({},{},function(e,docs){
     res.render("tasklist",{
+      "tasklist" : docs
+    });
+  });
+});
+
+/* GET tasklist page. */
+router.get("/view/:_id", function(req, res){
+  var db = req.db;
+  var collection = db.get("usercollection");
+  collection.find({"_id": req.params._id},{},function(err,docs){
+    
+    if(err) {
+      
+      console.log(err);
+      if(err.kind === 'ObjectId') {
+          return res.status(404).send({message: "Task not found with id " + req.params._id});                
+      }
+      return res.status(500).send({message: "Could not delete task with id " + req.params._id});
+  }
+
+  if(!docs) {
+      return res.status(404).send({message: "Task not found with id " + req.params._id});
+  }
+  
+    res.render("/viewupdate",{
       "tasklist" : docs
     });
   });
