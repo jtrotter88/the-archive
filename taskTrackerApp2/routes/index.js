@@ -61,7 +61,7 @@ router.get("/tasklist", function(req, res){
 });
 
 /* GET tasklist page. */
-router.get("/view/:_id", function(req, res){
+router.get("/viewupdate/:_id", function(req, res){
   var db = req.db;
   var collection = db.get("usercollection");
   collection.find({"_id": req.params._id},{},function(err,docs){
@@ -79,7 +79,7 @@ router.get("/view/:_id", function(req, res){
       return res.status(404).send({message: "Task not found with id " + req.params._id});
   }
   
-    res.render("/viewupdate",{
+    res.render("viewupdate",{
       "tasklist" : docs
     });
   });
