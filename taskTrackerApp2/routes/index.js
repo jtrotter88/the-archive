@@ -86,12 +86,12 @@ router.get("/viewupdate/:_id", function(req, res){
 });
 
 /* GET tasklist page after updating database. */
-router.get("/updatetask/:_id", function(req, res)
+router.post("/updatetask/:_id", function(req, res)
 {
 
    // Get our form values. These rely on the "name" attributes
-  var taskName = req.body.taskname;
-  var taskDesc = req.body.taskdesc;
+  //var taskName = String(req.body.taskname);
+  //var taskDesc = String(req.body.taskdesc);
 
   var db = req.db;
   var collection = db.get("usercollection");
@@ -102,8 +102,8 @@ router.get("/updatetask/:_id", function(req, res)
     {
       $set: 
       { 
-        "task" : taskName,
-        "description" : taskDesc,
+        "task" : req.body.taskname,
+        "description" : req.body.taskdesc,
       }
     }, 
     function (err, docs) 
@@ -121,7 +121,12 @@ router.get("/updatetask/:_id", function(req, res)
       {
         return res.status(404).send({message: "Task not found with id " + req.params._id});
       }  
+      /*if(docs.description==null)
+      {
+        return res.status(500).send({message: "description is null ===> " + "description = " + taskDesc + ",  task = " + taskName});
+      }*/
    /* res.render("tasklist",{
+    
       "tasklist" : docs
     });
 */
