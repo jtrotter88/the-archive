@@ -90,8 +90,8 @@ router.get("/updatetask/:_id", function(req, res)
 {
 
    // Get our form values. These rely on the "name" attributes
-   var taskName = req.body.taskname;
-   var taskDesc = req.body.taskdesc;
+  var taskName = req.body.taskname;
+  var taskDesc = req.body.taskdesc;
 
   var db = req.db;
   var collection = db.get("usercollection");
@@ -105,30 +105,29 @@ router.get("/updatetask/:_id", function(req, res)
         "task" : taskName,
         "description" : taskDesc,
       }
-    }, function (err, docs) {
-    
-    if(err) 
+    }, 
+    function (err, docs) 
     {
-      console.log(err);
-      if(err.kind === 'ObjectId') 
+      if(err) 
       {
-          return res.status(404).send({message: "Task not found with id " + req.params._id});                
+        console.log(err);
+        if(err.kind === 'ObjectId') 
+          {
+            return res.status(404).send({message: "Task not found with id " + req.params._id});                
+          }
+        return res.status(500).send({message: "Could not Update task with id " + req.params._id});
       }
-      return res.status(500).send({message: "Could not Update task with id " + req.params._id});
-  }
-
-  if(!docs)
-  {
-      return res.status(404).send({message: "Task not found with id " + req.params._id});
-  }
-  
+      if(!docs)
+      {
+        return res.status(404).send({message: "Task not found with id " + req.params._id});
+      }  
    /* res.render("tasklist",{
       "tasklist" : docs
     });
 */
-    res.redirect("/tasklist");
+      res.redirect("/tasklist");
 
-  });
+    });
 });
 
 
