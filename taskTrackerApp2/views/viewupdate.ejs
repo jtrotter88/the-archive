@@ -10,45 +10,51 @@
     <body class="background">
     <div class="taskcontainer">
     <table class="table">
+        <center>
+            <h1>TASK TO BE UPDATED</h1>
+        </center>
+        <br>
         <tr>
             <th scope="col">Document ID</th>
             <th scope="col">Task</th>
             <th scope="col">Description</th>
         </tr>
+        <% for(var i=0; i<tasklist.length; i++) {%>
+            <% var taskID = tasklist[i]._id %>
+            <% var updateURL = "/updatetask/"+ taskID; %>
         
-            <form method="GET" action="/edit">
-                <% for(var i=0; i<tasklist.length; i++) {%>
-                    <% var taskID = tasklist[i]._id %>
-                    <form method="GET" action="/edit">
-                    <tr>
-                    <td style="padding-right:10px;" name= "id"><p><%= taskID %></p></td>
-                    <td name="task"><p><%= tasklist[i].task %></p></td>
-                    <td><p><%= tasklist[i].description %></p></td>
+        <tr>
+            <td style="padding-right:10px;" name= "id"><p><%= taskID %></p></td>
+            <td name="task"><p><%= tasklist[i].task %></p></td>
             <td>
-                <button class="btn btn-primary pull-right" type="submit"> Delete</button>
-            </form></td>
-            <form method="GET" action="/view">
-                <td>
-                    <button class="btn btn-primary pull-right" type="submit"> View</button>
-                </form></td>
-            </tr>
-            <% } %>
+                <p><%= tasklist[i].description %></p>
+            </td>
+        </tr>
     </table>
 </div>
 
 <div class="taskContainer">
-    <form class="well span8" method="POST", action="/addtask">
+    <center>
+        <H1>Input Values to Update Task</H1>
+    </center>
+    <br>
+    <form class="well span8" method="GET", action=<%= updateURL %>>
         <div class="row">
             <div class="span3">
-                <label>TASK</label> <input class="txtbox" placeholder=
-                "Task Name" type="text" name="taskname"> <label>DESCRIPTION</label>
+                <label>TASK</label>
+                <input class="txtbox" placeholder="Task Name" type="text" name="taskname">
+            </div>
+            <div class="span3">
+                <label>DESCRIPTION</label>
                 <input class="txtbox" placeholder="Task Description" type="text" name="taskdesc">
             </div>
-    
-            <button class="btn btn-primary pull-right" type=
-            "submit">Send</button>
+            <br>
+            <center>
+            <button class="btn btn-primary pull-right" type="submit">Update</button>
+            </center>
         </div>
     </form>
+    <% } %>
 </div>
 </body>
 </html>

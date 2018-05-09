@@ -60,7 +60,7 @@ router.get("/tasklist", function(req, res){
   });
 });
 
-/* GET tasklist page. */
+/* GET viewupdate page. */
 router.get("/viewupdate/:_id", function(req, res){
   var db = req.db;
   var collection = db.get("usercollection");
@@ -84,6 +84,53 @@ router.get("/viewupdate/:_id", function(req, res){
     });
   });
 });
+
+/* GET tasklist page after updating database. */
+router.get("/updatetask/:_id", function(req, res)
+{
+
+   // Get our form values. These rely on the "name" attributes
+   var taskName = req.body.taskname;
+   var taskDesc = req.body.taskdesc;
+
+  var db = req.db;
+  var collection = db.get("usercollection");
+  collection.update(
+    {
+      "_id": req.params._id
+    },
+    {
+      $set: 
+      { 
+        "task" : taskName,
+        "description" : taskDesc,
+      }
+    }, function (err, docs) {
+    
+    if(err) 
+    {
+      console.log(err);
+      if(err.kind === 'ObjectId') 
+      {
+          return res.status(404).send({message: "Task not found with id " + req.params._id});                
+      }
+      return res.status(500).send({message: "Could not Update task with id " + req.params._id});
+  }
+
+  if(!docs)
+  {
+      return res.status(404).send({message: "Task not found with id " + req.params._id});
+  }
+  
+   /* res.render("tasklist",{
+      "tasklist" : docs
+    });
+*/
+    res.redirect("/tasklist");
+
+  });
+});
+
 
 router.get("/addtask", function(req,res){
   res.render("tasklist");
