@@ -4,10 +4,17 @@
     </head>
 
 
-
-    
-    
+    <div id="clouds">
+            <div class="cloud x1"></div>
+            <!-- Time for multiple clouds to dance around -->
+            <div class="cloud x2"></div>
+            <div class="cloud x3"></div>
+            <div class="cloud x4"></div>
+            <div class="cloud x5"></div>
+    </div>
     <body class="background">
+            
+    
     <div class="taskcontainer">
     <table class="table">
         <tr>
@@ -36,20 +43,35 @@
         <% } %>
     </table>
 </div>
-
-<div class="taskContainer">
-    <form class="well span8" method="POST", action="/addtask">
-        <div class="row">
-            <div class="span3">
-                <label>TASK</label> <input class="txtbox" placeholder=
-                "Task Name" type="text" name="taskname"> <label>DESCRIPTION</label>
-                <input class="txtbox" placeholder="Task Description" type="text" name="taskdesc">
-            </div>
-    
-            <button class="btn btn-primary pull-right" type=
-            "submit">Send</button>
-        </div>
-    </form>
+<div class="audio">
+<audio controls>
+        <source src="/audio/WorldMapMusic.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
 </div>
+
+<div class="taskContainer" id="addboxContainer">
+    <div class="table" id="addbox">
+        <form class="well span8" method="POST", action="/addtask">
+            <div class="row">
+                <div class="span3">
+                    <label>TASK</label> <input class="txtbox" placeholder="Task Name" type="text" name="taskname"> 
+                </div>
+                <div class="span3">
+                    <label>DESCRIPTION</label><input class="txtbox" placeholder="Task Description" type="text" name="taskdesc">
+                </div>
+                <button class="btn btn-primary pull-right" type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<audio controls>
+        <source src="/audio/WorldMapMusic.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
 </body>
+
+
 </html>
