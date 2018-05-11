@@ -239,4 +239,28 @@ body {
 	100% {margin-left: -1000px;}
 }
 
+.animation {
+    background-image: url(http://codeitdown.com/wp-content/uploads/2014/02/twitter-sprite.png);
+    height: 150px; /* width and height of each frame */
+    width: 150px;
+-webkit-animation: sprite-animation .6s steps(12,end) 1 reverse ; /* steps = number of frames */
+animation: sprite-animation .6s steps(12,end) 1 reverse ;
 
+ -webkit-animation-play-state: paused;
+-moz-animation-play-state: paused;
+-ms-animation-play-state: paused;
+-o-animation-play-state: paused;  
+
+}
+.animation:hover {
+-webkit-animation: sprite-animation .6s steps(12,end) infinite; /* steps = number of frames */
+animation: sprite-animation .6s steps(12,end) infinite;
+}
+@-webkit-keyframes sprite-animation { /* Safari & Chrome */
+    from { background-position: 0 0; }
+    to { background-position: -1800px 0; } /* negative of sprite sheet width */
+}
+@keyframes sprite-animation {
+    from { background-position: 0 0; }
+    to { background-position: -1800px 0; } /* negative of sprite sheet width */
+}
