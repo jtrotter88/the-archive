@@ -58,6 +58,7 @@ header.masthead {
   background-attachment: scroll;
   background-size: cover;
   background-color:black;
+  background:linear-gradient(0deg,black 0,white 100%);
 }
 
 header.masthead .masthead-content {
