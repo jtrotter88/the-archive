@@ -52,7 +52,7 @@
 
 
 .background{
-    background-size: 700px,auto;
+    background-size: 700px, auto;
     margin: auto;
     background-image: url("https://jtrotter88.github.io/the-archive/calculatorSite/img/Super-Mario-World.png"),url("https://jtrotter88.github.io/the-archive/calculatorSite/img/Super-Mario-World-Water-Texture.jpg");
     background-repeat: no-repeat, repeat;
