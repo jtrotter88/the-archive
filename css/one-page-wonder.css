@@ -122,6 +122,10 @@ header.masthead .bg-circle-4 {
   header.masthead .masthead-content .masthead-subheading {
     font-size: 4rem;
   }
+  .col-lg-6 {
+    padding-top: 30px;
+  }
+
 }
 
 .bg-primary {
