@@ -1,0 +1,98 @@
+
+    body{
+        background-color: lightskyblue;
+            
+        }
+        .container{
+        display:grid;
+        width: 300px;
+        margin: auto 24%;
+        vertical-align: middle;
+        background-color: yellowgreen;
+        box-shadow:blue 5px 5px;
+        border-radius: 25px;
+        }
+        #back{
+        display:grid;
+        width: 300px;
+        margin: auto 25%;
+        grid-template-columns: 100%;
+        vertical-align: middle;
+        padding-top:2%;
+        }
+        .bg-basic{
+            background-color: #dddddd;
+            color: white:
+        }
+        .bg-secondary{
+            background-color: saddlebrown;
+            color: white;
+        }
+        .bg-dark{
+            background-color: #343a40;
+            color: white;
+        }
+        .bg-danger{
+            background-color: red;
+            color: white;
+            box-shadow:darkviolet 5px 5px;
+        }
+        .bg-warning{
+            background-color: #ffc107;
+            color: white;
+    
+    
+        }
+        .bg-info{
+            background-color: #17a2b8;
+            color: white;
+        }
+        .bg-success{
+            background-color: #28a745;
+            color: white;
+        }
+        ul{
+        margin-top:20px;
+        }
+        ul li{
+        list-style-type: none;
+        display: inline;
+        margin:5px;
+        }
+        
+        a{
+        text-decoration: none;
+        }
+        .input{
+        height: 30px;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-align: right;
+        border:0;
+        background-color: greenyellow;
+        box-shadow:black -2px 2px;
+        color: crimson;
+        }
+        .controls{
+        display: inline-grid;
+        grid-template-columns: repeat(4,25%);
+        padding-top: 5%;
+        }
+        .controls button{
+        border:0;
+        font-weight: bold;
+        font-size:20px;
+        margin:5px;
+        text-shadow:black 2px 2px;
+        }
+        
+        .controls button:hover{
+        background-color:lightyellow;
+        color:red;
+        }
+        
+        h5  {
+            color:blueviolet;
+            text-shadow:antiquewhite 0px 1px;
+            font-size: 18px;
+        }

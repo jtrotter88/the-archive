@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JT's Number Machine</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="cal.css">
+    </head>
+    <body>
+        <div algin="center">
+        <div class="container" align="center">
+            <h5>JT's Number Machine</h5>
+            <input type="text" class="input" id="txtinput2" readonly='true' />
+            <input type="text" class="input" id="txtoperator" readonly='true'/>
+            <input type="text" class="input" id="txtinput1" readonly='true'/>
+        
+      
+
+
+            
+
+        <!--cal -->    <div class="controls" align="center">
+        <button type="button" class="btn bg-danger" disabled='disabled'><</button>
+            <button class="btn bg-warning" onclick="del()"  >del</button>
+            <button class="btn bg-info" onclick="reset()">c</button>
+            <button class="btn bg-dark" onclick="onClick(event)">/</button>           
+            <button  class="btn bg-secondary"onclick="onClick(event)">7</button>
+            <button class="btn bg-secondary" onclick="onClick(event)">8</button>
+            <button   class="btn bg-secondary" onclick="onClick(event)">9</button>
+            <button class="btn bg-dark" onclick="onClick(event)">*</button>
+            <button class="btn bg-secondary"  onclick="onClick(event)">4</button>
+            <button  class="btn bg-secondary" onclick="onClick(event)">5</button>
+            <button  class="btn bg-secondary" onclick="onClick(event)">6</button>
+            <button  class="btn bg-dark" onclick="onClick(event)">-</button>
+            <button class="btn bg-secondary" onclick="onClick(event)">1</button>
+            <button  class="btn bg-secondary" onclick="onClick(event)">2</button>
+            <button  class="btn bg-secondary" onclick="onClick(event)">3</button>
+            <button  class="btn bg-dark" onclick="onClick(event)">+</button> 
+            <button class="btn bg-basic" disabled='disabled'></button>
+            <button  class="btn bg-secondary" onclick="onClick(evnt)">0</button>
+            <button  class="btn bg-dark" onclick="onDecimal()">.</button>
+            <button class="btn bg-success btn-lg" onclick="calculate()">=</button>
+        </div>
+        </div><!--cal area-->
+    </div>
+<script src="script.js"></script>
+<div align="center" id="back">
+<a type="button" algin="center" class="btn bg-primary" href="index.html">Go back</a>
+
+</div>
+
+</div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+        
+    </body>
+</html>
