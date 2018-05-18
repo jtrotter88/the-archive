@@ -1,0 +1,266 @@
+.taskcontainer{
+    width: 600px;
+    margin: 5% 25% 2.5%;
+    background: rgba(255,255,255,0.8);
+    /* opacity: 0.8; */
+    border-radius: 50px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 20px 20px 10px rgba(100,100,100,0.6);
+    position: relative;
+    top: -300px;
+}
+.taskcontainer p, label{
+    text-shadow:0.25px 0.5px green;
+}
+
+#addboxContainer {
+    margin-top: 1%;
+}
+
+.audio{
+    opacity: 0.5;
+    position:relative;
+    top:-250px;
+    margin: auto 40%;
+}
+
+.audio:hover{
+    opacity: 1;
+}
+
+.table {
+    margin: auto;
+    background: radial-gradient(white 30%, rgba(255,255,255,0.5), rgba(255,255,255,0.3),rgba(255,255,255,0));
+    padding: 43px;
+    /* border-radius: 50px; */
+}
+
+#addbox {
+    padding: 0;
+    margin-top: unset;
+}
+
+.span3 {
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.well {
+    margin: auto 25%;
+}
+
+
+.background{
+    background-size: 960px,auto;
+    margin: auto;
+    background-image: url("https://jtrotter88.github.io/the-archive/calculatorSite/img/Super-Mario-World.png"),url("https://jtrotter88.github.io/the-archive/calculatorSite/img/Super-Mario-World-Water-Texture.jpg");
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc;
+    background-position: 50% 50%, center;
+}
+/*.background:after{
+    position: absolute;
+    opacity: 0.75;
+    content:'';
+    top: 0px;
+    left: 0px;
+    width: 960px;
+    height: 960px;
+    z-index:-1;
+    background: linear-gradient(-45deg, red,blue,yellow,green);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 2s ease infinite;
+}*/
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+
+/*Lets start with the cloud formation rather*/
+
+/*The container will also serve as the SKY*/
+
+*{ margin: 0; padding: 0;}
+
+body {
+	/*To hide the horizontal scroller appearing during the animation*/
+	overflow: hidden;
+}
+
+#clouds{
+	/* padding: 100px 0; */
+	/* background: #c9dbe9; */
+	/* background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%); */
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+	width: 200px;
+	height: 60px;
+	background: #fff;
+	/*box-shadow: grey 6px 1px; */
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	position: relative;
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    /*box-shadow: grey 2px 3px;*/
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+	left: 200px;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; /*opacity proportional to the size*/
+	
+	/*Speed will also be proportional to the size and opacity*/
+	/*More the speed. Less the time in 's' = seconds*/
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+	left: -250px; top: -200px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 470px; top: -250px;
+	
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: -150px; top: -150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+
+.animation {
+    background-image: url(http://codeitdown.com/wp-content/uploads/2014/02/twitter-sprite.png);
+    height: 150px; /* width and height of each frame */
+    width: 150px;
+-webkit-animation: sprite-animation .6s steps(12,end) 1 reverse ; /* steps = number of frames */
+animation: sprite-animation .6s steps(12,end) 1 reverse ;
+
+ -webkit-animation-play-state: paused;
+-moz-animation-play-state: paused;
+-ms-animation-play-state: paused;
+-o-animation-play-state: paused;  
+
+}
+.animation:hover {
+-webkit-animation: sprite-animation .6s steps(12,end) infinite; /* steps = number of frames */
+animation: sprite-animation .6s steps(12,end) infinite;
+}
+@-webkit-keyframes sprite-animation { /* Safari & Chrome */
+    from { background-position: 0 0; }
+    to { background-position: -1800px 0; } /* negative of sprite sheet width */
+}
+@keyframes sprite-animation {
+    from { background-position: 0 0; }
+    to { background-position: -1800px 0; } /* negative of sprite sheet width */
+}
