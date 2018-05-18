@@ -171,17 +171,17 @@ header.masthead .bg-circle-4 {
     color: red;
   }
 
-  #taskTrackerBtn {
+  .taskTrackerBtn {
     width:60%;
     margin: auto 20%;
   }
 
-  #aboutMeBtn {
+  .aboutMeBtn {
     width: 43%;
     margin: auto 28.5%;
   }
 
-  #calculatorBtn {
+  .calculatorBtn {
     width: 44%;
     margin: auto 28%;
   }
