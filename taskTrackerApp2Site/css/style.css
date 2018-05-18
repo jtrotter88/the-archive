@@ -1,0 +1,10 @@
+.w3-content {
+    max-width: 820px;
+    border: solid;
+    border-width: 10px;
+    margin-top: 15px;
+}
+
+img {
+    max-width: 800px;
+}
