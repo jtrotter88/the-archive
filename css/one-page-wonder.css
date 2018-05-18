@@ -163,8 +163,8 @@ header.masthead .bg-circle-4 {
 :target:before {
   content:"";
   display:block;
-  height:90px; /* fixed header height*/
-  margin:-90px 0 0; /* negative fixed header height */
+  height:100px; /* fixed header height*/
+  margin:-100px 0 0; /* negative fixed header height */
   }
 
   .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
@@ -174,4 +174,14 @@ header.masthead .bg-circle-4 {
   .taskTrackerBtn {
     width:60%;
     margin: auto 20%;
+  }
+
+  .aboutMeBtn {
+    width: 43%;
+    margin: auto 28.5%;
+  }
+
+  .calculatorBtn {
+    width: 44%;
+    margin: auto 28%;
   }
